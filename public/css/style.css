@@ -1,0 +1,314 @@
+:root {
+    /*colores  principales de la pagina*/
+    /* paleta de colores de la pagina*/
+    --blanco: #ffffff;
+    --negro: #212121;
+    --gris: #597e8d;
+    --amarillo: #ffbf00;
+    --grisOscuro: #293133;
+    --verdeclaro: #DAF7A6;
+}
+
+html {
+    /* para el borde cajita */
+    box-sizing: border-box;
+    font-size: 62.5%;
+    min-height: 100%;
+    /* scroll-snap-type: y mandatory; */
+}
+
+
+/* aplica a todos para que no afecte el padding*/
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Kreon', serif;
+    /*degrade */
+    background-image: linear-gradient(to top, var(--negro) 0%, var(--grisOscuro) 100%);
+    min-height: 100%;
+}
+
+
+/* 1rem=10px*/
+
+.titulo {
+    text-align: center;
+    color: var(--verdeclaro);
+    font-size: 3.8rem;
+    font-weight: 700;
+}
+
+.titulo1 {
+    text-align: center;
+    color: var(--verdeclaro);
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.subtitulo {
+    text-align: center;
+    color: var(--amarillo);
+    font-size: 3.8rem;
+    font-weight: 700;
+}
+
+.contenedor {
+    max-width: 100rem;
+    margin: 0 auto;
+    /*margin: arriba derecha abajo izquierda*/
+}
+
+.sombra {
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(235, 221, 235, 1);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(235, 221, 235, 1);
+    box-shadow: 0px 0px 0px 0px rgba(235, 221, 235, 1);
+}
+
+.boton {
+    background-color: var(--amarillo);
+    color: var(--grisOscuro);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+    border: none;
+}
+
+@media (min-width:780px) {
+    .boton {
+        width: auto;
+    }
+}
+
+.boton:hover {
+    cursor: pointer;
+}
+
+.icono {
+    height: 10rem;
+    width: 10rem;
+    background-color: var(--amarillo);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-bg {
+    background-color: var(--amarillo);
+}
+
+.navegacion-principal {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navegacion-principal a {
+    color: var(--grisOscuro);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 2rem;
+}
+
+.navegacion-principal a:hover {
+    background-color: var(--grisOscuro);
+    color: var(--blanco);
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+p {
+    font-size: 2rem;
+    color: var(--verdeclaro);
+}
+
+.foto {}
+
+.servicios-contenedor {
+    /* display: grid;
+    1fr = 1 fraccion repeat (3 la cantidad a dividir
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem; */
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width:768px) {
+    .servicios-contenedor {
+        display: grid;
+        grid-template-columns: 33.3% 33.3% 33.3%;
+        column-gap: 1rem;
+    }
+}
+
+.unservicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+.imatitulo {
+    background-color: #212f3d;
+    background-size: cover;
+    padding: 2rem;
+    border: 1rem;
+}
+
+.banner2 {
+    background-image: url(../img/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    position: relative;
+}
+
+.contenido-banner2 {
+    /* position: absolute; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* FORMULARIO */
+
+.formulario {
+    background-color: var(--gris);
+    padding: 2rem;
+    border-radius: 10px;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+.formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--primario);
+    margin-bottom: 2rem;
+    display: block;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+@media (min-width:768px) {
+    .formulario {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+.contenedor-campos {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.campo {
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+@media (min-width:480px) {
+    .campo {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .campo {
+        flex: 0 0 calc(50% - .5rem)
+    }
+}
+
+.campo label {
+    color: var(--blanco);
+    font-weight: 700;
+    margin-bottom: .5rem;
+    display: block;
+}
+
+@media (min-width:480px) {
+    .campo label {
+        flex: 0 0 90px;
+    }
+}
+
+.campo input[type="text"],
+.campo input[type="tel"],
+.campo input[type="email"],
+.campo textarea {
+    width: 100%;
+    padding: .5rem;
+    border: none;
+    border-radius: .5rem;
+}
+
+@media (min-width: 768px) {
+     :is(.campo) :is( input[type="text"], input[type="text"], input[type="tel"], input[type="mail"], textarea) {
+        flex: 1;
+    }
+}
+
+.w-100 {
+    flex: 0 0 100%;
+}
+
+.campo textarea {
+    height: 4rem;
+}
+
+.enviar {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.enviar .boton {
+    width: 100%;
+}
+
+.contenido-banner2 h2,
+.contenido-banner2
+/*Telefono */
+
+@media (min-width:480px) {
+    .navegacion-principal .contenedor {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/* Tablet */
+
+@media (min-width:768px) {
+    .navegacion-principal .contenedor {
+        flex-direction: row;
+    }
+}
+
+.footer {
+    text-align: center;
+}
